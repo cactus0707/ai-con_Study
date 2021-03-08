@@ -13,10 +13,10 @@ console.log(sumOf1to3);
 function testArgs(){
     var newArr = Array.prototype.slice.call(arguments); // 
     console.log(newArr);
-    console.log(newArr.indexOf('b'));
+    console.log(newArr.indexOf('b')); //arguments 객체는 배열이 아니라서 에러발생.
     console.log(arguments.indexOf('b'));
 }
-testArg('a','b');
+testArgs('a','b');
 /**
  * 새로운 개념인것 같다. 항상 함수 호출할때 매개변수 방식으로만(매개변수 벡터) 받았는데,
  * 매개변수: 함수 선언시 작성되는 변수
