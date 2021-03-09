@@ -8,7 +8,7 @@ function Teacher(name, age, subject){
     };
 }
 
-const jay = new Teacher('jay', 30, 'JavaScript'); // 
+const jay = new Teacher('jay', 30, 'JavaScript'); // 별도의 리턴문이 없어도, 새로운 객체를 만듬 // 데이터 영역에서 가르키는 곳이 다르다는 의미
 console.log(jay);
 jay.teach('bbo');
 
