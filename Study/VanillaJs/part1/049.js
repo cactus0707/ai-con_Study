@@ -8,16 +8,16 @@ function Teacher(name, age, subject){
     };
 }
 
-const jay = new Teacher('jay', 30, 'JavaScript'); // 별도의 리턴문이 없어도, 새로운 객체를 만듬 // 데이터 영역에서 가르키는 곳이 다르다는 의미
+const jay = new Teacher('jay', 30, 'JavaScript'); // 별도의 리턴문이 없어도, 새로운 객체를 만듬 // 데이터 영역에서 가르키는 곳이 다르다는 의미 빈 객체를 만들고, 그때의 객체 (this에 매개변수를 연결 시킴)
 console.log(jay);
-jay.teach('bbo');
+jay.teach('bbo'); // 그 객체의 스튜던트 매개변수로 뽀를 넘겨서  콘솔로그 , 7번째 줄로감
 
-console.log(jay.constructor);
-console.log(jay instanceof Teacher);
+console.log(jay.constructor); // 생성자 함수를 바로 불렀는데, 아마 내장함수 일듯?
+console.log(jay instanceof Teacher); // 인스턴스 오브 ????
 
-const jay2 = Teacher('jay', 30, 'JavaScript');
-console.log(jay2);
-console.log(age);
+const jay2 = Teacher('jay', 30, 'JavaScript'); // --> New 로 할당 하지 않았기 떄문에 아래는 모두 전역 객체의 것을 가르킴 (데이터 영역, 이 객채를 위해 재할당이 이루어 지지 않음 )
+console.log(jay2); // 언디파인드 . -- 새로운 객체가 반환 되지않아 제이 2 는 언디파인드로 출력 
+console.log(age); // 이부분은 데이터 영역의 에이지를 호출, 객체에서는 이 에이지를 참조할 듯.
 
 /**
  * https://ko.javascript.info/constructor-new 
