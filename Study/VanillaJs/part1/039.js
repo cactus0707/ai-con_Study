@@ -12,3 +12,5 @@ function print(){
 
 print();
 console.log(b);
+
+//scope 가 함수 단위, 컬리 단위가 아님. 렉시컬 단위.

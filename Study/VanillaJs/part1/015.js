@@ -38,5 +38,5 @@ do{
 
 console.log(hometown);
 /**
- * ${'property'} // ?
+ * ${'property'} // 템플릿 문자열.
  */
