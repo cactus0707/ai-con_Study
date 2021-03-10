@@ -9,13 +9,14 @@
 ㅇ이렇게 어떤 실행 컨텍스트가 활성화 될 떄 자바스크립트 엔진은 해당 컨텍스트에 관련된 코드들은 실행하는데 필요한 "환경 정보"들을 수집해서 실행 컨텍스트 객체에 저장
 
 ㅇ저장되는 "환경 정보"
-    VariableEnvironment : 현재 컨텍스트 내의 식별자들에 대한 정보 + 외부 환경 정보,
+    -VariableEnvironment : 현재 컨텍스트 내의 식별자들에 대한 정보 + 외부 환경 정보,
     "선언 시점의 LexicalEnvironment 스냅샷" -> 변경 사항은 저장 되지 않음.
 ----------------------------- VariableEnvironment 와 LexicalEnvironment 가 있고 Lexical내부에는 environmnetRecord 와 outerEnvironmentReference 로 구성 되어있음 ----------------------------
     초기화 과정 중에는 거의 동일하고, 코드 진행에 따라 달라짐. LexicalEnvironment보면 자세한 내용은 될 것 같음.
 
-    LexicalEnvironment : 처음에는 VariableEnvironment와 같지만 (처음에 VariableEnvironment를 복사해서 옴), 변경 사항이 실시간으로 반영됨. 
+    -LexicalEnvironment : 처음에는 VariableEnvironment와 같지만 (처음에 VariableEnvironment를 복사해서 옴), 변경 사항이 실시간으로 반영됨. 
     이후에는 주로 LexicalEnvironment를 사용함. //
 
 
-    ThisBinding : this 식별자가 바라봐야할 대상 객체
+    -ThisBinding : this 식별자가 바라봐야할 대상 객체
+    
